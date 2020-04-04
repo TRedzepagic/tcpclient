@@ -13,9 +13,15 @@ func main() {
 		fmt.Println("No port number specified... Exiting....")
 		return
 	}
-	port := ":" + arguments[1]
+	addr := arguments[1]
 	// Connects to server
-	connection, _ := net.Dial("tcp", port)
+	connection, err := net.Dial("tcp", addr)
+	if err != nil {
+		fmt.Println(err)
+		fmt.Println("Please use format 'Address:Port' or ':Port' for localhost")
+		return
+
+	}
 	for {
 		// Client -> Server
 		fmt.Print("Text to send: ")
