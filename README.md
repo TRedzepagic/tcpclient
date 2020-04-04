@@ -12,5 +12,7 @@ git clone https://github.com/TRedzepagic/tcplistener.git
 Then run with :
 
 ```
-go run main.go "Address:Port" or ":Port" (for localhost) syntax
+go run main.go "Address:Port" 
+or 
+go run main.go ":Port" (localhost)
 ```
