@@ -18,3 +18,7 @@ or
 ```
 go run main.go ":Port" (localhost)
 ```
+
+Doing this in tandem with my tcp listen server will open a netcat-like environment for sending messages which the server will display (on its end) and log.
+
+Upon successfully sending a message, the server will respond to the client.
